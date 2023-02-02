@@ -10,6 +10,18 @@ export default class Order {
         this._id = id;
         this._customerId  = customerId;
         this._items = items;
+        this.validate();
+    }
+
+    validate() {
+        if(this._id.length === 0){
+            throw new Error("Id is required");
+        }
+        if(this._customerId.length === 0){
+            throw new Error("CustomerId is required");
+        }
+
+        return true;
     }
 
 }

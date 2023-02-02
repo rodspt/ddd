@@ -13,6 +13,10 @@ export default class Customer {
          this.validate();
      }
 
+     get name(): string {
+         return this._name;
+     }
+
      validate() {
          if(this._name.length === 0){
             throw new Error("Name is required");
@@ -22,7 +26,9 @@ export default class Customer {
          }
      }
 
-
+     isActive(): boolean {
+         return this._active;
+     }
 
      changeName(name: string){
         this._name = name;
@@ -44,6 +50,3 @@ export default class Customer {
         this._address = address;
      }
 }
-
-
-//let customer = new Customer("123","");
