@@ -1,0 +1,22 @@
+
+npm i typescript --save-dev
+npx tsc --init
+npx tsc
+npm i tslint --save-dev
+npx tslint --init
+
+##
+npm init 
+npm i -D jest @types/jest ts-node --save-dev    
+npm i -D @swc/jest @swc/cli @swc/core --save-dev
+npx jest --init 
+
+jest.config.ts 
+
+  transform: {
+    "^.+\.(t|j)sx?$": ["@swc/jest"],
+  },
+
+--
+
+npm test 
